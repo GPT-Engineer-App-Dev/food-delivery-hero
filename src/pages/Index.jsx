@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Input, InputGroup, InputRightElement, Button, FormControl, Container, Text, VStack, Heading, Box, Image } from "@chakra-ui/react";
+import { Input, InputGroup, InputRightElement, Button, FormControl, Container, Text, VStack, Heading, Box, Image, Link } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
 import { FaSearch, FaMotorcycle } from "react-icons/fa";
 
 const Index = () => {
@@ -33,8 +34,8 @@ const Index = () => {
         </InputGroup>
         <Heading as="h1" size="2xl">Delicious Delights</Heading>
         <Text fontSize="lg">Satisfy your cravings with a click!</Text>
-        <Button colorScheme="teal" size="lg" leftIcon={<FaMotorcycle />}>
-          Order Now
+        <Button as={RouterLink} to="/order-tracking/12345" colorScheme="teal" size="lg" leftIcon={<FaMotorcycle />}>
+          Track Order
         </Button>
         <Box boxSize="sm">
           <Image src="/images/food-delivery.png" alt="Food Delivery" />
